@@ -1,7 +1,7 @@
 # DevUtils
 
 <p align="center">
-  <img src="/public/logo.png" alt="DevUtils Logo" width="120" height="120" />
+  <img src="/public/placeholder-logo.svg" alt="DevUtils Logo" width="120" height="120" />
 </p>
 
 <p align="center">
