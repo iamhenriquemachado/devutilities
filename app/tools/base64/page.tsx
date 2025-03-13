@@ -11,9 +11,19 @@ export const metadata = {
 export default function Base64Page() {
   return (
     <div className="container py-8">
+
+      <div>
+        <h1 className="text-2xl font-bold">Base 64 Encode/Decode</h1>
+      </div>
+      <p className="text-muted-foreground mb-10 mt-5">
+        Easily encode and decode Base64 data with our online utility, so you can transmit your data safely or decode Base64-encoded strings.
+      </p>
+      <div className="mt-8">
+        <Base64Tool />
+      </div>
       <ToolDocumentation
         title="Base64 Encoder/Decoder"
-        description="This free tool offers a quick and easy way to encode text to Base64 and decode Base64 back to text. If you work with data transmission, email attachments, or need to encode binary data, you can use DevUtils' Base64 tool to safely convert your data. Built with 💜 by developers for developers."
+        description=""
         icon={<CodeIcon className="h-6 w-6" />}
         howToUse={[
           "Select 'Encode' or 'Decode' mode based on your needs.",
@@ -71,9 +81,7 @@ export default function Base64Page() {
         ]}
       />
 
-      <div className="mt-8">
-        <Base64Tool />
-      </div>
+
 
       <ToolNavigation />
     </div>

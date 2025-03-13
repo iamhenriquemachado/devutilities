@@ -19,13 +19,9 @@ interface ToolDocumentationProps {
 export function ToolDocumentation({ title, description, icon, howToUse, benefits, faqs }: ToolDocumentationProps) {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-2 mb-6">
-        <div className="text-jam-purple">{icon}</div>
-        <h1 className="text-2xl font-bold">{title}</h1>
-      </div>
 
       <div className="prose dark:prose-invert max-w-none">
-        <p className="text-muted-foreground text-lg">{description}</p>
+         <p className="text-muted-foreground text-lg">{description}</p>
 
         <div className="mt-8">
           <h2 className="text-xl font-semibold mb-4">How to Use {title}</h2>

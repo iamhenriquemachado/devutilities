@@ -11,9 +11,20 @@ export const metadata = {
 export default function JsonFormatterPage() {
   return (
     <div className="container py-8">
+      <div className="flex items-center gap-2 mb-6">
+        <div className="text-jam-purple">
+          <FileJson className="h-6 w-6" />
+        </div>
+        <h1 className="text-2xl font-bold">JSON Formatter</h1>
+      </div>
+      <p className="text-muted-foreground mb-10 mt-5">
+        Format and beautify your JSON data for better readability and debugging. Quickly visualize and organize your
+        JSON data with ease.
+      </p>
+      <JsonFormatter />
       <ToolDocumentation
         title="JSON Formatter"
-        description="This free tool offers a quick and easy way to format and validate JSON data. If you work with APIs, configuration files, or need to debug JSON data, you can use DevUtils' JSON Formatter to beautify and validate your JSON with syntax highlighting."
+        description=""
         icon={<FileJson className="h-6 w-6" />}
         howToUse={[
           "Paste your JSON data into the input field.",
@@ -68,13 +79,11 @@ export default function JsonFormatterPage() {
           },
         ]}
       />
-
-      <div className="mt-8">
-        <JsonFormatter />
-      </div>
-
-      <ToolNavigation />
+            <ToolNavigation />
     </div>
+    
   )
 }
+
+
 
