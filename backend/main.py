@@ -16,7 +16,7 @@ logger = logging.getLogger("uvicorn")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Frontend URL
+    allow_origins=["*"],  # Allow all origins, or specify the frontend domain (e.g., "http://localhost:3000")
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -24,6 +24,9 @@ app.add_middleware(
 
 class JsonFormatter(BaseModel):
     json: str
+
+class UUIDGenerator(BaseModel):
+    uuid: str
 
 # Routes
 @app.get("/")
@@ -41,11 +44,21 @@ async def json_formatter(json_data: JsonFormatter):
         } 
     except Exception as e:
           logger.error(f"Error while parsing JSON: {str(e)}")
-          raise HTTPException(status_code=404, detail="Error while formating JSON ❌")
+          raise HTTPException(status_code=404, detail="Error while formating JSON")
 
-@app.post("/api/url-encoding")
-async def url_encoding():
-    pass 
+# Route UUID Generator
+@app.get("/api/uuid-generator")
+async def uuid_generator():
+    try:
+        uuid_generated = str(uuid.uuid4())
+        print("uuid:", uuid_generated)
+
+        return {
+            "uuid": uuid_generated
+        }
+    except Exception as e:
+          logger.error(f"Error while creating UUID: {str(e)}")
+          raise HTTPException(status_code=404, detail="Error while creating UUID")
 
 if __name__ == "__main__":
     import uvicorn

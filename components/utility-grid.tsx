@@ -39,18 +39,18 @@ const utilities = [
     href: "/tools/url-encoder",
   },
   {
-    title: "Hash Generator",
-    description:
-      "Generate MD5, SHA-1, SHA-256 and other hashes from your input text for verification or security purposes.",
-    icon: <Hash className="h-6 w-6" />,
-    href: "/tools/hash-generator",
-  },
-  {
     title: "UUID Generator",
     description:
       "Generate random UUIDs/GUIDs for use in your applications, databases, or anywhere you need unique identifiers.",
     icon: <Key className="h-6 w-6" />,
     href: "/tools/uuid-generator",
+  },
+  {
+    title: "Hash Generator",
+    description:
+      "Generate MD5, SHA-1, SHA-256 and other hashes from your input text for verification or security purposes.",
+    icon: <Hash className="h-6 w-6" />,
+    href: "/tools/hash-generator",
   },
   {
     title: "Color Converter",

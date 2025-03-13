@@ -59,11 +59,6 @@ export default function Base64Page() {
               "URL encoding is the process of converting characters into a format that can be transmitted over the internet without confusion. It replaces unsafe characters with a '%' followed by a two-digit hexadecimal number.",  
           },  
           {  
-            question: "Why would I need to encode or decode a URL?",  
-            answer:  
-              "URL encoding is necessary when you need to include special characters (e.g., spaces, slashes) in a URL. Decoding is needed to convert the encoded URL back to its readable format.",  
-          },  
-          {  
             question: "Is URL encoding secure?",  
             answer:  
               "No, URL encoding is not a security method. It's simply a way to ensure data is safely transmitted. For sensitive information, you should consider encryption.",  

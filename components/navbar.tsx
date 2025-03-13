@@ -19,7 +19,7 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <div className="hidden md:flex">
             <Button variant="ghost" size="sm" asChild>
-              <Link href="https://github.com/yourusername/dev-utilities" target="_blank" rel="noopener noreferrer">
+              <Link href="https://github.com/iamhenriquemachado/devutilities" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-4 w-4" />
                 Contribute
               </Link>

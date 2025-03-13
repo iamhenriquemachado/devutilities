@@ -44,19 +44,20 @@ const utilities = [
     tags: ["url", "encode", "decode", "convert"],
   },
   {
-    title: "Hash Generator",
-    description: "Generate MD5, SHA-1, SHA-256 hashes",
-    icon: <Hash className="h-5 w-5" />,
-    href: "/tools/hash-generator",
-    tags: ["hash", "md5", "sha1", "sha256", "security"],
-  },
-  {
     title: "UUID Generator",
     description: "Generate random UUIDs/GUIDs",
     icon: <Key className="h-5 w-5" />,
     href: "/tools/uuid-generator",
     tags: ["uuid", "guid", "generate", "random"],
   },
+  {
+    title: "Hash Generator",
+    description: "Generate MD5, SHA-1, SHA-256 hashes",
+    icon: <Hash className="h-5 w-5" />,
+    href: "/tools/hash-generator",
+    tags: ["hash", "md5", "sha1", "sha256", "security"],
+  },
+
   {
     title: "Color Converter",
     description: "Convert between color formats",

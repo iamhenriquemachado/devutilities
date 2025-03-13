@@ -16,30 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
+    "/tools/uuid-generator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/uuid-generator/page.js"
+    ],
     "/tools/json-formatter/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/tools/json-formatter/page.js"
     ],
-    "/faq/page": [
+    "/api/format-json/route": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/faq/page.js"
-    ],
-    "/tools/base64/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/base64/page.js"
-    ],
-    "/tools/url-encoder/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/url-encoder/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/api/format-json/route.js"
     ]
   }
 }
