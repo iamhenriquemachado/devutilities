@@ -63,17 +63,19 @@ async def uuid_generator():
 
 @app.post("/api/yaml-to-json")
 async def yaml_to_json(yaml_data: YamlToJson):
+
     try:
-        parsed_yaml = yaml.load(yaml_data.yaml)
-        formated_yaml = yaml.dump(parsed_yaml, indent=2)
-        print(formated_yaml)
+        parsed_yaml = yaml.safe_load(yaml_data.yaml)
+        converted_yaml_to_json = json.dumps(parsed_yaml, indent=2)
+        print(converted_yaml_to_json)
         return {
-            "json": formated_yaml
+            "message": "converted", 
+            "formatted": converted_yaml_to_json
         }
     
     except Exception as e:
-          logger.error(f"Error while parsing JSON: {str(e)}")
-          raise HTTPException(status_code=404, detail="Error while formating JSON")
+        logger.error(f"Error while parsing YAML: {str(e)}")
+        raise HTTPException(status_code=400, detail="Error while formatting YAML to JSON")
 
 if __name__ == "__main__":
     import uvicorn

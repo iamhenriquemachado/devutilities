@@ -8,7 +8,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Copy, Check, RefreshCw } from "lucide-react"
 import { usePreferences } from "@/components/preferences-provider"
 
-export function YamltoJson() {
+export function YamlFormatter() {
   const [input, setInput] = useState("")
   const [output, setOutput] = useState("")
   const [error, setError] = useState<string | null>(null)
@@ -20,14 +20,14 @@ export function YamltoJson() {
   useEffect(() => {
     if (preferences.autoFormat && input && !loading) {
       const timeoutId = setTimeout(() => {
-        YamltoJson()
+        yamlToJson()
       }, 1000)
 
       return () => clearTimeout(timeoutId)
     }
   }, [input, preferences.autoFormat])
 
-  const formatJson = async () => {
+  const yamlToJson = async () => {
     if (!input) return
 
     setError(null)
@@ -41,12 +41,12 @@ export function YamltoJson() {
         setLoading(false)
       } catch (e) {
         // If local parsing fails, send to Python backend
-        const response = await fetch("http://localhost:8000/api/format-json", {
+        const response = await fetch("http://localhost:8000/api/yaml-to-json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ json: input }),
+          body: JSON.stringify({ yaml: input }),
         })
 
         const data = await response.json()
@@ -54,7 +54,7 @@ export function YamltoJson() {
         if (!response.ok) {
           throw new Error(data.error || "Failed to convert YAML to JSON")
         }
-
+        console.log("Response data:", data)
         setOutput(data.formatted)
       }
     } catch (err) {
@@ -124,7 +124,7 @@ export function YamltoJson() {
       )}
 
       <div className="flex flex-wrap gap-4">
-        <Button onClick={YamltoJson} disabled={!input || loading} className="bg-jam-purple hover:bg-jam-darkPurple">
+        <Button onClick={yamlToJson} disabled={!input || loading} className="bg-jam-purple hover:bg-jam-darkPurple">
           {loading ? (
             <>
               <RefreshCw className="mr-2 h-4 w-4 animate-spin" />

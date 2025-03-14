@@ -1,4 +1,4 @@
-import { YamltoJson } from "@/components/tools/yaml-to-json"
+import { YamlFormatter } from "@/components/tools/yaml-to-json"
 import { FileJson } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
@@ -20,7 +20,7 @@ export default function YamlToJsonFormatterPage() {
       <p className="text-muted-foreground mb-10 mt-5">
       Convert and format your YAML data into JSON effortlessly. Easily visualize and organize your structured data for better readability and debugging.
       </p>
-      <YamltoJson />
+      <YamlFormatter />
       <ToolDocumentation
         title="JSON Formatter"
         description=""

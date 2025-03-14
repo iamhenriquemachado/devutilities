@@ -16,6 +16,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
+    "/tools/url-encoder/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/url-encoder/page.js"
+    ],
     "/tools/yaml-to-json/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
