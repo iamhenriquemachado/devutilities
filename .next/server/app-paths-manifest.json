@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/tools/url-encoder/page": "app/tools/url-encoder/page.js",
-  "/tools/yaml-to-json/page": "app/tools/yaml-to-json/page.js"
+  "/tools/hash-generator/page": "app/tools/hash-generator/page.js"
 }

@@ -16,15 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
-    "/tools/url-encoder/page": [
+    "/tools/hash-generator/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tools/url-encoder/page.js"
-    ],
-    "/tools/yaml-to-json/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/yaml-to-json/page.js"
+      "static/chunks/app/tools/hash-generator/page.js"
     ]
   }
 }

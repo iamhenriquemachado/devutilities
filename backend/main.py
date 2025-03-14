@@ -6,6 +6,7 @@ import hashlib
 import uuid
 import logging
 import yaml
+import base64
 
 
 app = FastAPI(title="Dev Utilities API")
@@ -29,12 +30,16 @@ class UUIDGenerator(BaseModel):
 class YamlToJson(BaseModel):
     yaml: str 
 
-# Routes
+class HashGenerator(BaseModel):
+    text: str
+    algorithm: str 
+
+# SERVER Running 
 @app.get("/")
 def read_root():
     return {"message": "Dev Utilities API is running 🚀"}
 
-# Route: JSON Formater 
+# JSON Formatter 
 @app.post("/api/format-json")
 async def json_formatter(json_data: JsonFormatter):
     try:
@@ -47,7 +52,9 @@ async def json_formatter(json_data: JsonFormatter):
           logger.error(f"Error while parsing JSON: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while formating JSON")
 
-# Route UUID Generator
+
+
+# UUID Generator 
 @app.get("/api/uuid-generator")
 async def uuid_generator():
     try:
@@ -61,6 +68,8 @@ async def uuid_generator():
           logger.error(f"Error while creating UUID: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while creating UUID")
 
+
+# YAML to JSON Converter 
 @app.post("/api/yaml-to-json")
 async def yaml_to_json(yaml_data: YamlToJson):
 
@@ -76,6 +85,29 @@ async def yaml_to_json(yaml_data: YamlToJson):
     except Exception as e:
         logger.error(f"Error while parsing YAML: {str(e)}")
         raise HTTPException(status_code=400, detail="Error while formatting YAML to JSON")
+
+
+
+# Hash Generator 
+@app.post("/api/hash-generator")
+async def hash_generator(hash_data: HashGenerator):
+    try:
+        text_bytes = hash_data.text.encode("utf-8")
+
+        if hash_data.algorithm.upper() == "MD5":
+            hash_object = hashlib.md5(text_bytes)
+        if hash_data.algorithm.upper() == "SHA-1":
+            hash_object = hashlib.sha1(text_bytes)
+        if hash_data.algorithm.upper() == "SHA-256":
+            hash_object = hashlib.sha256(text_bytes)
+        if hash_data.algorithm.upper() == "SHA-512":
+            hash_object = hashlib.sha3_512(text_bytes)
+        return {
+            "hash": hash_object.hexdigest()
+        } 
+    except Exception as e:
+        logger.error(f"Error while generating Hash: {str(e)}")
+        raise HTTPException(status_code=400, detail="Error while generating Hash.")
 
 if __name__ == "__main__":
     import uvicorn
