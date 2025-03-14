@@ -22,6 +22,24 @@ export function PasswordGenerator() {
     setError(null)
     setLoading(true)
 
+    if (length <= 0) {
+        setError("The length should be greater than 0")
+        setLoading(false)
+        return
+      }
+
+      if (length > 256) {
+        setError("The max length for a password is 256")
+        setLoading(false)
+        return
+      }
+
+      if (!(includeNumbers || includeSpecialChars || includeUppercase || includeLowercase)) {
+        setError("At least one option needs to be selected")
+        setLoading(false)
+        return
+      }
+
     const options = {
       length,
       includeNumbers,
@@ -31,15 +49,25 @@ export function PasswordGenerator() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/password-generator", {
+      const response = await fetch("http://localhost:8000/api/secure-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(options),
-      })
+        body: JSON.stringify({
+            length,
+            includeNumbers,
+            includeSpecialChars,
+            includeUppercase,
+            includeLowercase,
+          }),
+        });
 
       const data = await response.json()
+
+      if (length < 0) {
+        throw new Error(data.error || "The length should be greater than 0")
+      }
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to generate password")

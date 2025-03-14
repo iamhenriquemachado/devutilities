@@ -1,5 +1,7 @@
 {
   "/page": "app/page.js",
+  "/tools/uuid-generator/page": "app/tools/uuid-generator/page.js",
   "/tools/hash-generator/page": "app/tools/hash-generator/page.js",
+  "/tools/base64/page": "app/tools/base64/page.js",
   "/tools/secure-password/page": "app/tools/secure-password/page.js"
 }

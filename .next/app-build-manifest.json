@@ -16,10 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
+    "/tools/uuid-generator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/uuid-generator/page.js"
+    ],
     "/tools/hash-generator/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/tools/hash-generator/page.js"
+    ],
+    "/tools/base64/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/base64/page.js"
     ],
     "/tools/secure-password/page": [
       "static/chunks/webpack.js",

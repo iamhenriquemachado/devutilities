@@ -35,11 +35,13 @@ class HashGenerator(BaseModel):
     algorithm: str 
 
 class SecurePassword(BaseModel):
-    #options: int
-    #uppercase: bool
-    lowercase: bool
-    #numbers: bool
-    #special_characters: bool 
+    length: int
+    includeNumbers: bool
+    includeSpecialChars: bool 
+    includeUppercase: bool
+    includeLowercase: bool
+
+
 
 # SERVER Running 
 @app.get("/")
@@ -116,23 +118,46 @@ async def hash_generator(hash_data: HashGenerator):
 
 
 # Secure Password Generator 
-@app.get("/api/secure-password")
+@app.post("/api/secure-password")
 async def secure_password(pass_data: SecurePassword):
-    uppercase = string.ascii_uppercase 
-    lowercase_chars = string.ascii_lowercase
-    numbers = string.digits
-    special_characters = string.punctuation
+    try:
+        numbers_chars = string.digits
+        special_characters_chars = string.punctuation
+        uppercase_chars = string.ascii_uppercase 
+        lowercase_chars = string.ascii_lowercase
 
-    chars = ''
+        chars = ''
 
-    if pass_data.lowercase:
-        chars += lowercase_chars 
-    
-    password = ''.join(random.choice(chars) for _ in range(18))
-    return {
-        "message": "pass generated", 
-        "password": password
-    }
+        if pass_data.includeNumbers:
+            chars += numbers_chars 
+        if pass_data.includeSpecialChars:
+            chars += special_characters_chars
+        if pass_data.includeUppercase:
+            chars += uppercase_chars
+        if pass_data.includeLowercase:
+            chars += lowercase_chars
+
+        if not chars:
+            raise HTTPException(status_code=400, detail="You must select at least one option.")
+        
+        if pass_data.length <= 0:
+            raise HTTPException(status_code=400, detail="You must select a value more than zero.")
+        
+        if pass_data.length > 256:
+            raise HTTPException(status_code=400, detail="You cannot generate a password greater than 256 characters.")
+        
+        password = ''.join(random.choice(chars) for _ in range(pass_data.length))
+        return {
+            "message": "pass generated", 
+            "password": password
+        }
+
+    except Exception as e: 
+        logger.error(f"Error while generating Secure Password: {str(e)}")
+        raise HTTPException(status_code=400, detail="Error while generating Secure Password.")
+
+
+
 
 
 

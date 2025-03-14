@@ -77,6 +77,12 @@ export default function PasswordGeneratorPage() {
               answer:
                 "Use a password length of at least 12 characters and include a mix of uppercase letters, lowercase letters, numbers, and special characters. The more diverse and longer the password, the stronger it will be.",
             },
+            {
+                question: "What is the maximum number of characters I can generate for a password?",
+                answer:
+                  "The maximum length for password generation is 256 characters. This ensures optimal performance and prevents overloading the system. Longer passwords may be supported in certain cases, but 256 characters are more than sufficient for most use cases.",
+              }
+              
           ]}
           
       />
