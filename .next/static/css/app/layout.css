@@ -1604,6 +1604,12 @@ video {
 .font-semibold {
   font-weight: 600;
 }
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
 .tabular-nums {
   --tw-numeric-spacing: tabular-nums;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
@@ -2841,6 +2847,10 @@ video {
 
   .sm\:flex {
     display: flex;
+  }
+
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:max-w-\[425px\] {

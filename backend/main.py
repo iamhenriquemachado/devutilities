@@ -6,8 +6,8 @@ import hashlib
 import uuid
 import logging
 import yaml
-import base64
-
+import string
+import random 
 
 app = FastAPI(title="Dev Utilities API")
 logger = logging.getLogger("uvicorn")
@@ -34,6 +34,13 @@ class HashGenerator(BaseModel):
     text: str
     algorithm: str 
 
+class SecurePassword(BaseModel):
+    #options: int
+    #uppercase: bool
+    lowercase: bool
+    #numbers: bool
+    #special_characters: bool 
+
 # SERVER Running 
 @app.get("/")
 def read_root():
@@ -51,7 +58,6 @@ async def json_formatter(json_data: JsonFormatter):
     except Exception as e:
           logger.error(f"Error while parsing JSON: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while formating JSON")
-
 
 
 # UUID Generator 
@@ -87,7 +93,6 @@ async def yaml_to_json(yaml_data: YamlToJson):
         raise HTTPException(status_code=400, detail="Error while formatting YAML to JSON")
 
 
-
 # Hash Generator 
 @app.post("/api/hash-generator")
 async def hash_generator(hash_data: HashGenerator):
@@ -108,6 +113,31 @@ async def hash_generator(hash_data: HashGenerator):
     except Exception as e:
         logger.error(f"Error while generating Hash: {str(e)}")
         raise HTTPException(status_code=400, detail="Error while generating Hash.")
+
+
+# Secure Password Generator 
+@app.get("/api/secure-password")
+async def secure_password(pass_data: SecurePassword):
+    uppercase = string.ascii_uppercase 
+    lowercase_chars = string.ascii_lowercase
+    numbers = string.digits
+    special_characters = string.punctuation
+
+    chars = ''
+
+    if pass_data.lowercase:
+        chars += lowercase_chars 
+    
+    password = ''.join(random.choice(chars) for _ in range(18))
+    return {
+        "message": "pass generated", 
+        "password": password
+    }
+
+
+
+    
+
 
 if __name__ == "__main__":
     import uvicorn

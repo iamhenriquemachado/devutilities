@@ -60,6 +60,13 @@ const utilities = [
     href: "/tools/hash-generator",
   },
   {
+    title: "Secure Password Generator",
+    description:
+      "nstantly create strong, random passwords to enhance security. Customize length, include symbols, numbers, and uppercase/lowercase letters",
+    icon: <Hash className="h-6 w-6" />,
+    href: "/tools/secure-password",
+  },
+  {
     title: "Color Converter",
     description:
       "Convert HEX to RGB and generate CSS snippets for web, Swift, and Android with our easy-to-use color converter.",

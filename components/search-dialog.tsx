@@ -17,7 +17,8 @@ import {
   Clock,
   Table,
   FileCode,
-  RefreshCw,
+  RefreshCw, 
+  KeySquare
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -51,6 +52,13 @@ const utilities = [
     tags: ["uuid", "guid", "generate", "random"],
   },
   {
+    title: "YAML to JSON",
+    description: "Convert YAML to JSON format",
+    icon: <FileCode className="h-5 w-5" />,
+    href: "/tools/yaml-to-json",
+    tags: ["yaml", "json", "convert", "format"],
+  },
+  {
     title: "Hash Generator",
     description: "Generate MD5, SHA-1, SHA-256 hashes",
     icon: <Hash className="h-5 w-5" />,
@@ -58,11 +66,11 @@ const utilities = [
     tags: ["hash", "md5", "sha1", "sha256", "security"],
   },
   {
-    title: "YAML to JSON",
-    description: "Convert YAML to JSON format",
-    icon: <FileCode className="h-5 w-5" />,
-    href: "/tools/yaml-to-json",
-    tags: ["yaml", "json", "convert", "format"],
+    title: "Secure Password Generator",
+    description: "Secure, random password generator with strong encryption.",
+    icon: <KeySquare className="h-5 w-5" />,
+    href: "/tools/secure-password",
+    tags: ["password", "security", "algorithm", "encryption"],
   },
   {
     title: "Color Converter",
