@@ -1,5 +1,4 @@
 {
   "/page": "app/page.js",
-  "/tools/uuid-generator/page": "app/tools/uuid-generator/page.js",
-  "/tools/json-formatter/page": "app/tools/json-formatter/page.js"
+  "/tools/yaml-to-json/page": "app/tools/yaml-to-json/page.js"
 }

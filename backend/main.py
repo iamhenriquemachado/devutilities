@@ -2,13 +2,11 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import json
-import base64
 import hashlib
 import uuid
-from urllib.parse import quote, unquote
-import jwt
-from typing import Dict, Any, Optional
 import logging
+import yaml
+
 
 app = FastAPI(title="Dev Utilities API")
 logger = logging.getLogger("uvicorn")
@@ -27,6 +25,9 @@ class JsonFormatter(BaseModel):
 
 class UUIDGenerator(BaseModel):
     uuid: str
+
+class YamlToJson(BaseModel):
+    yaml: str 
 
 # Routes
 @app.get("/")
@@ -59,6 +60,20 @@ async def uuid_generator():
     except Exception as e:
           logger.error(f"Error while creating UUID: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while creating UUID")
+
+@app.post("/api/yaml-to-json")
+async def yaml_to_json(yaml_data: YamlToJson):
+    try:
+        parsed_yaml = yaml.load(yaml_data.yaml)
+        formated_yaml = yaml.dump(parsed_yaml, indent=2)
+        print(formated_yaml)
+        return {
+            "json": formated_yaml
+        }
+    
+    except Exception as e:
+          logger.error(f"Error while parsing JSON: {str(e)}")
+          raise HTTPException(status_code=404, detail="Error while formating JSON")
 
 if __name__ == "__main__":
     import uvicorn

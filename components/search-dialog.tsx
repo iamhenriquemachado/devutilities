@@ -57,7 +57,13 @@ const utilities = [
     href: "/tools/hash-generator",
     tags: ["hash", "md5", "sha1", "sha256", "security"],
   },
-
+  {
+    title: "YAML to JSON",
+    description: "Convert YAML to JSON format",
+    icon: <FileCode className="h-5 w-5" />,
+    href: "/tools/yaml-to-json",
+    tags: ["yaml", "json", "convert", "format"],
+  },
   {
     title: "Color Converter",
     description: "Convert between color formats",
@@ -85,13 +91,6 @@ const utilities = [
     icon: <Clock className="h-5 w-5" />,
     href: "/tools/timestamp-converter",
     tags: ["timestamp", "date", "time", "convert"],
-  },
-  {
-    title: "YAML to JSON",
-    description: "Convert YAML to JSON format",
-    icon: <FileCode className="h-5 w-5" />,
-    href: "/tools/yaml-to-json",
-    tags: ["yaml", "json", "convert", "format"],
   },
   {
     title: "Query to JSON",

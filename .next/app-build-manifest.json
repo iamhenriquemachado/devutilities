@@ -16,20 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
-    "/tools/uuid-generator/page": [
+    "/tools/yaml-to-json/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tools/uuid-generator/page.js"
-    ],
-    "/tools/json-formatter/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/json-formatter/page.js"
-    ],
-    "/api/format-json/route": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/api/format-json/route.js"
+      "static/chunks/app/tools/yaml-to-json/page.js"
     ]
   }
 }

@@ -46,6 +46,13 @@ const utilities = [
     href: "/tools/uuid-generator",
   },
   {
+    title: "YAML to JSON",
+    description:
+      "Easily convert YAML to JSON with our converter. Useful when you're working with configuration files and need to switch between them.",
+    icon: <FileCode className="h-6 w-6" />,
+    href: "/tools/yaml-to-json",
+  },
+  {
     title: "Hash Generator",
     description:
       "Generate MD5, SHA-1, SHA-256 and other hashes from your input text for verification or security purposes.",
@@ -79,13 +86,6 @@ const utilities = [
       "Paste Unix timestamps and get a human readable dates. Perfect for developers working with time-based data.",
     icon: <Clock className="h-6 w-6" />,
     href: "/tools/timestamp-converter",
-  },
-  {
-    title: "YAML to JSON",
-    description:
-      "Easily convert YAML to JSON with our converter. Useful when you're working with configuration files and need to switch between them.",
-    icon: <FileCode className="h-6 w-6" />,
-    href: "/tools/yaml-to-json",
   },
   {
     title: "Query Parameters to JSON",
