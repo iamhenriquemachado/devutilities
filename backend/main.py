@@ -8,6 +8,8 @@ import logging
 import yaml
 import string
 import random 
+import csv 
+import io 
 
 app = FastAPI(title="Dev Utilities API")
 logger = logging.getLogger("uvicorn")
@@ -41,6 +43,8 @@ class SecurePassword(BaseModel):
     includeUppercase: bool
     includeLowercase: bool
 
+class CsvFormatter(BaseModel):
+    csv: str
 
 
 # SERVER Running 
@@ -157,13 +161,31 @@ async def secure_password(pass_data: SecurePassword):
         raise HTTPException(status_code=400, detail="Error while generating Secure Password.")
 
 
+# Convert CSV to JSON
+@app.post("/api/csv-to-json")
+async def csv_to_json(csv_data: CsvFormatter):
+    try:
+        csv_content = io.StringIO(csv_data.csv)
+        parsed_csv = csv.DictReader(csv_content)
+        
+        cleaned_data = []
+        for row in parsed_csv:
+            cleaned_row = {key.strip(): value.strip() for key, value in row.items()}
+            cleaned_data.append(cleaned_row)
 
+        converted_json = json.dumps(cleaned_data, indent=2)
+
+        return {
+             "converted": converted_json
+        } 
+    
+    except Exception as e:
+          logger.error(f"Error while parsing CSV: {str(e)}")
+          raise HTTPException(status_code=404, detail="Error while formating CSV to JSON")
 
 
 
     
-
-
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

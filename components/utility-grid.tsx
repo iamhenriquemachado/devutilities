@@ -67,6 +67,13 @@ const utilities = [
     href: "/tools/secure-password",
   },
   {
+    title: "CSV to JSON",
+    description:
+      "Easily convert CSV data to JSON format with our free tool. Quickest way to turn tabular data into a JSON format for APIs and data processing.",
+    icon: <Table className="h-6 w-6" />,
+    href: "/tools/csv-to-json",
+  },
+  {
     title: "Color Converter",
     description:
       "Convert HEX to RGB and generate CSS snippets for web, Swift, and Android with our easy-to-use color converter.",
@@ -79,13 +86,6 @@ const utilities = [
       "Decode and verify JWT tokens to inspect their headers, payloads, and signatures for debugging and verification.",
     icon: <Lock className="h-6 w-6" />,
     href: "/tools/jwt-decoder",
-  },
-  {
-    title: "CSV to JSON",
-    description:
-      "Easily convert CSV data to JSON format with our free tool. Quickest way to turn tabular data into a JSON format for APIs and data processing.",
-    icon: <Table className="h-6 w-6" />,
-    href: "/tools/csv-to-json",
   },
   {
     title: "Timestamp to Date Converter",

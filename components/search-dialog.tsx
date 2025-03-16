@@ -73,6 +73,13 @@ const utilities = [
     tags: ["password", "security", "algorithm", "encryption"],
   },
   {
+    title: "CSV to JSON",
+    description: "Convert CSV data to JSON format",
+    icon: <Table className="h-5 w-5" />,
+    href: "/tools/csv-to-json",
+    tags: ["csv", "json", "convert", "table"],
+  },
+  {
     title: "Color Converter",
     description: "Convert between color formats",
     icon: <Palette className="h-5 w-5" />,
@@ -86,13 +93,7 @@ const utilities = [
     href: "/tools/jwt-decoder",
     tags: ["jwt", "token", "decode", "verify"],
   },
-  {
-    title: "CSV to JSON",
-    description: "Convert CSV data to JSON format",
-    icon: <Table className="h-5 w-5" />,
-    href: "/tools/csv-to-json",
-    tags: ["csv", "json", "convert", "table"],
-  },
+
   {
     title: "Timestamp Converter",
     description: "Convert timestamps to readable dates",

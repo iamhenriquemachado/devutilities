@@ -16,25 +16,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
-    "/tools/uuid-generator/page": [
+    "/tools/csv-to-json/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tools/uuid-generator/page.js"
+      "static/chunks/app/tools/csv-to-json/page.js"
     ],
-    "/tools/hash-generator/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tools/hash-generator/page.js"
-    ],
-    "/tools/base64/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/base64/page.js"
-    ],
-    "/tools/secure-password/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tools/secure-password/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }
