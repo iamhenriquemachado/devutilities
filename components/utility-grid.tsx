@@ -72,41 +72,7 @@ const utilities = [
       "Easily convert CSV data to JSON format with our free tool. Quickest way to turn tabular data into a JSON format for APIs and data processing.",
     icon: <Table className="h-6 w-6" />,
     href: "/tools/csv-to-json",
-  },
-  {
-    title: "Color Converter",
-    description:
-      "Convert HEX to RGB and generate CSS snippets for web, Swift, and Android with our easy-to-use color converter.",
-    icon: <Palette className="h-6 w-6" />,
-    href: "/tools/color-converter",
-  },
-  {
-    title: "JWT Decoder",
-    description:
-      "Decode and verify JWT tokens to inspect their headers, payloads, and signatures for debugging and verification.",
-    icon: <Lock className="h-6 w-6" />,
-    href: "/tools/jwt-decoder",
-  },
-  {
-    title: "Timestamp to Date Converter",
-    description:
-      "Paste Unix timestamps and get a human readable dates. Perfect for developers working with time-based data.",
-    icon: <Clock className="h-6 w-6" />,
-    href: "/tools/timestamp-converter",
-  },
-  {
-    title: "Query Parameters to JSON",
-    description:
-      "Convert URL query parameters into a structured JSON object, simplifying the process of parsing and manipulating URL data in web applications.",
-    icon: <FileText className="h-6 w-6" />,
-    href: "/tools/query-to-json",
-  },
-  {
-    title: "Cron Expression Generator",
-    description: "Create and validate cron expressions for scheduling tasks in various systems and applications.",
-    icon: <RefreshCw className="h-6 w-6" />,
-    href: "/tools/cron-generator",
-  },
+  }
 ]
 
 export function UtilityGrid() {

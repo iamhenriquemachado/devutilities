@@ -79,42 +79,6 @@ const utilities = [
     href: "/tools/csv-to-json",
     tags: ["csv", "json", "convert", "table"],
   },
-  {
-    title: "Color Converter",
-    description: "Convert between color formats",
-    icon: <Palette className="h-5 w-5" />,
-    href: "/tools/color-converter",
-    tags: ["color", "hex", "rgb", "hsl", "convert"],
-  },
-  {
-    title: "JWT Decoder",
-    description: "Decode and verify JWT tokens",
-    icon: <Lock className="h-5 w-5" />,
-    href: "/tools/jwt-decoder",
-    tags: ["jwt", "token", "decode", "verify"],
-  },
-
-  {
-    title: "Timestamp Converter",
-    description: "Convert timestamps to readable dates",
-    icon: <Clock className="h-5 w-5" />,
-    href: "/tools/timestamp-converter",
-    tags: ["timestamp", "date", "time", "convert"],
-  },
-  {
-    title: "Query to JSON",
-    description: "Convert URL query parameters to JSON",
-    icon: <FileText className="h-5 w-5" />,
-    href: "/tools/query-to-json",
-    tags: ["query", "params", "json", "convert"],
-  },
-  {
-    title: "Cron Generator",
-    description: "Create and validate cron expressions",
-    icon: <RefreshCw className="h-5 w-5" />,
-    href: "/tools/cron-generator",
-    tags: ["cron", "schedule", "generate", "validate"],
-  },
 ]
 
 export function SearchDialog() {
