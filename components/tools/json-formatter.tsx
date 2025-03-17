@@ -41,7 +41,7 @@ export function JsonFormatter() {
         setLoading(false)
       } catch (e) {
         // If local parsing fails, send to Python backend
-        const response = await fetch("https://dev-utilities-six.vercel.app/api/format-json", {
+        const response = await fetch("https://devutilities.onrender.com/api/format-json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

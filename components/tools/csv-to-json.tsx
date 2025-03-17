@@ -41,7 +41,7 @@ export function CsvToJsonFormatter() {
         setLoading(false)
       } catch (e) {
         // If local parsing fails, send to Python backend
-        const response = await fetch("https://dev-utilities-six.vercel.app/api/csv-to-json", {
+        const response = await fetch("https://devutilities.onrender.com/api/csv-to-json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
