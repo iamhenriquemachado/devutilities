@@ -16,10 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/tools/layout.js"
     ],
-    "/tools/csv-to-json/page": [
+    "/tools/secure-password/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/tools/csv-to-json/page.js"
+      "static/chunks/app/tools/secure-password/page.js"
     ]
   }
 }
