@@ -17,11 +17,12 @@ logger = logging.getLogger("uvicorn")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins, or specify the frontend domain (e.g., "http://localhost:3000")
+    allow_origins=["https://dev-utilities-six.vercel.app"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class JsonFormatter(BaseModel):
     json: str

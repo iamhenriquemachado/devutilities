@@ -17,7 +17,7 @@ export function UUIDGenerator() {
     setError(null)
 
     try {
-      const response = await fetch("http://localhost:8000/api/uuid-generator", {
+      const response = await fetch("https://dev-utilities-six.vercel.app/api/uuid-generator", {
         method: "GET",
       })
 

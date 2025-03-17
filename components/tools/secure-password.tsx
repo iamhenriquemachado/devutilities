@@ -49,7 +49,7 @@ export function PasswordGenerator() {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/secure-password", {
+      const response = await fetch("https://dev-utilities-six.vercel.app/api/secure-password", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

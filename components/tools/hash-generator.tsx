@@ -26,7 +26,7 @@ export function HashGenerator() {
     setLoading(true)
 
     try {
-      const response = await fetch("http://localhost:8000/api/hash-generator", {
+      const response = await fetch("https://dev-utilities-six.vercel.app/api/hash-generator", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

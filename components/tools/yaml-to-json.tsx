@@ -41,7 +41,7 @@ export function YamlFormatter() {
         setLoading(false)
       } catch (e) {
         // If local parsing fails, send to Python backend
-        const response = await fetch("http://localhost:8000/api/yaml-to-json", {
+        const response = await fetch("https://dev-utilities-six.vercel.app/api/yaml-to-json", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
