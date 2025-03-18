@@ -89,7 +89,6 @@ async def yaml_to_json(yaml_data: YamlToJson):
     try:
         parsed_yaml = yaml.safe_load(yaml_data.yaml)
         converted_yaml_to_json = json.dumps(parsed_yaml, indent=2)
-        print(converted_yaml_to_json)
         return {
             "message": "converted", 
             "formatted": converted_yaml_to_json
