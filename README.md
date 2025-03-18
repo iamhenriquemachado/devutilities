@@ -5,7 +5,7 @@
 </p>
 <p align="center">
   <a href="https://devutilities.vercel.app/">
-    devutilities.vercel.app/
+    devutilities.vercel.app
   </a>
 </p>
 
