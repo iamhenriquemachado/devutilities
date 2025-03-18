@@ -3,8 +3,11 @@
 <p align="center">
   <img src="/public/placeholder-logo.svg" alt="DevUtils Logo" width="120" height="120" />
 </p>
-
-  <a href="https://devutilities.vercel.app/" alt="DevUtils Website" width="120" height="120" align="center">
+<p align="center">
+  <a href="https://devutilities.vercel.app/">
+    devutilities.vercel.app/
+  </a>
+</p>
 
 <p align="center">
   A collection of essential tools to streamline your development workflow.
