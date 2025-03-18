@@ -12,7 +12,7 @@
 
 | Tool Name | Description | Link |
 |-----------|-------------|------|
-| JSON Formatter | Format and beautify your JSON data | [/tools/json-formatter](#) |
+| JSON Formatter | Format and beautify your JSON data | [/tools/json-formatter](https://devutilities.vercel.app/tools/json-formatter) |
 | Base64 Encode/Decode | Encode and decode Base64 data | [/tools/base64](#) |
 | URL Encode/Decode | Convert URLs to a safe format | [/tools/url-encoder](#) |
 | UUID Generator | Generate random UUIDs/GUIDs | [/tools/uuid-generator](#) |
