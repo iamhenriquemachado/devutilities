@@ -17,7 +17,7 @@ logger = logging.getLogger("uvicorn")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://devutilities.vercel.app/tools/uuid-generator"],  
+    allow_origins=["https://devutilities.vercel.app"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
