@@ -29,5 +29,4 @@ We are constantly improving **DevUtilities** and planning the following features
 - **Unit Converter** – Convert between metric and imperial units.
 - **Color Picker & Converter** – Convert HEX, RGB, and HSL color codes.
 - **PDF to Text Extractor** – Extract text from PDF files.
-- **More Hash Algorithms** – Support for additional cryptographic hash functions like SHA-512, BLAKE2, etc.
 - **Command Line Interface (CLI)** – Build a CLI for DevUtilities to access tools directly from the terminal.
