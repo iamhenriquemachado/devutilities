@@ -69,11 +69,11 @@ npm start  # or yarn start
 This project is licensed under the MIT License.
 
 ## 📑 Changelog
-- For detailed information on all updates, improvements, and bug fixes, check the [Changelog](/)
+For detailed information on all updates, improvements, and bug fixes, check the [Changelog](/)
 
 ## 🤝 Contributing 
 We welcome contributions from the community! 🚀 Whether it's fixing bugs, adding new features, or improving documentation, your help is appreciated.
 
 - Report Issues – If you find a bug or have a feature request, open an issue.
-- Submit Pull Requests – Fork the repository, make your changes, and submit a p- -ull request.
+- Submit Pull Requests – Fork the repository, make your changes, and submit a pull request.
 - Code Review – All contributions will be reviewed to ensure quality and maintainability before being merged.
