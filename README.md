@@ -12,14 +12,15 @@
 
 | Tool Name | Description | Link |
 |-----------|-------------|------|
-| JSON Formatter | Format and beautify your JSON data | [/tools/json-formatter](#) |
-| Base64 Encode/Decode | Encode and decode Base64 data | [/tools/base64](#) |
-| URL Encode/Decode | Convert URLs to a safe format | [/tools/url-encoder](#) |
-| UUID Generator | Generate random UUIDs/GUIDs | [/tools/uuid-generator](#) |
-| YAML to JSON | Convert YAML to JSON format | [/tools/yaml-to-json](#) |
-| Hash Generator | Generate MD5, SHA-1, SHA-256 hashes | [/tools/hash-generator](#) |
-| Secure Password Generator | Secure, random password generator with strong encryption | [/tools/secure-password](#) |
-| CSV to JSON | Convert CSV data to JSON format | [/tools/csv-to-json](#) |
+| JSON Formatter | Format and beautify your JSON data | [/tools/json-formatter](https://devutilities.vercel.app/tools/json-formatter) |
+| Base64 Encode/Decode | Encode and decode Base64 data | [/tools/base64](https://devutilities.vercel.app/tools/base64) |
+| URL Encode/Decode | Convert URLs to a safe format | [/tools/url-encoder](https://devutilities.vercel.app/tools/url-encoder) |
+| UUID Generator | Generate random UUIDs/GUIDs | [/tools/uuid-generator](https://devutilities.vercel.app/tools/uuid-generator) |
+| YAML to JSON | Convert YAML to JSON format | [/tools/yaml-to-json](https://devutilities.vercel.app/tools/yaml-to-json) |
+| Hash Generator | Generate MD5, SHA-1, SHA-256 hashes | [/tools/hash-generator](https://devutilities.vercel.app/tools/hash-generator) |
+| Secure Password Generator | Secure, random password generator with strong encryption | [/tools/secure-password](https://devutilities.vercel.app/tools/secure-password) |
+| CSV to JSON | Convert CSV data to JSON format | [/tools/csv-to-json](https://devutilities.vercel.app/tools/csv-to-json) |
+| QRCode Generator | Generate QR codes instantly from text, URLs, or data. | [/tools/qrcode](https://devutilities.vercel.app/tools/qrcode) |
 
 ## 🚀 Getting Started
 
@@ -59,7 +60,6 @@ npm start  # or yarn start
 - Markdown Previewer – Live preview for Markdown files.
 - Text Case Converter – Convert text to uppercase, lowercase, camelCase, snake_case, etc.
 - IP Address Lookup – Get geolocation details of an IP address.
-- QR Code Generator – Generate QR codes from URLs or text.
 - Timestamp Converter – Convert Unix timestamps to readable dates.
 - Unit Converter – Convert between metric and imperial units.
 - Color Picker & Converter – Convert HEX, RGB, and HSL color codes.
@@ -68,9 +68,12 @@ npm start  # or yarn start
 ## 📜 License
 This project is licensed under the MIT License.
 
-🤝 Contributing
+## 📑 Changelog
+- For detailed information on all updates, improvements, and bug fixes, check the [Changelog](/)
+
+## 🤝 Contributing 
 We welcome contributions from the community! 🚀 Whether it's fixing bugs, adding new features, or improving documentation, your help is appreciated.
 
 - Report Issues – If you find a bug or have a feature request, open an issue.
-- Submit Pull Requests – Fork the repository, make your changes, and submit a pull request.
+- Submit Pull Requests – Fork the repository, make your changes, and submit a p- -ull request.
 - Code Review – All contributions will be reviewed to ensure quality and maintainability before being merged.
