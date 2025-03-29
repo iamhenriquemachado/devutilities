@@ -21,7 +21,7 @@ export function QRCodeGenerator() {
     setLoading(true)
 
     try {
-      const response = await fetch("http://localhost:8000/api/qrcode", {
+      const response = await fetch("https://devutilities.onrender.com/api/qrcode", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: input }),
