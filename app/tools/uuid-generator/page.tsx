@@ -22,7 +22,7 @@ export default function UUIDFormaterPage() {
       </p>
       <UUIDGenerator />
       <ToolDocumentation
-        title="JSON Formatter"
+        title="UUID Generator"
         description=""
         icon={<FileJson className="h-6 w-6" />}
         howToUse={[
@@ -35,10 +35,6 @@ export default function UUIDFormaterPage() {
             {
               title: "Unique Identifiers",
               description: "Generate universally unique identifiers (UUIDs) for secure and conflict-free identification.",
-            },
-            {
-              title: "Multiple UUID Versions",
-              description: "Supports different UUID versions, including v1 (timestamp-based) and v4 (random-based).",
             },
             {
               title: "Instant Generation",

@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from fastapi.responses import StreamingResponse
 import json
 import hashlib
 import uuid
@@ -10,6 +11,7 @@ import string
 import random 
 import csv 
 import io 
+import qrcode
 
 app = FastAPI(title="Dev Utilities API")
 logger = logging.getLogger("uvicorn")
@@ -17,7 +19,7 @@ logger = logging.getLogger("uvicorn")
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://devutilities.vercel.app"],  
+    allow_origins=["https://devutilities.vercel.app", "http://localhost:3000"],  
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
@@ -47,11 +49,13 @@ class SecurePassword(BaseModel):
 class CsvFormatter(BaseModel):
     csv: str
 
+class QrCode(BaseModel):
+    text: str 
 
 # SERVER Running 
 @app.get("/")
 def read_root():
-    return {"message": "Dev Utilities API is running 🚀"}
+    return {"message": "Dev Utilities API is running - Endpoint: http://0.0.0.0:8000/ 🚀"}
 
 # JSON Formatter 
 @app.post("/api/format-json")
@@ -183,6 +187,24 @@ async def csv_to_json(csv_data: CsvFormatter):
           logger.error(f"Error while parsing CSV: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while formating CSV to JSON")
 
+
+
+# Generate QRCode
+@app.post("/api/qrcode")
+async def qrcode_generator(qrcode_data: QrCode):
+    try:
+        data = qrcode_data.text 
+        img = qrcode.make(data)
+
+        img_io = io.BytesIO()
+        img.save(img_io, 'PNG')
+        img_io.seek(0)
+
+        return StreamingResponse(img_io, media_type="image/png")
+
+    except Exception as e:
+        logger.error(f"Error while generating QrCode: {str(e)}")
+        raise HTTPException(status_code=404, detail="Error while generating a QrCode")
 
 # Start server
 if __name__ == "__main__":

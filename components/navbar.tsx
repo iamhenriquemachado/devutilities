@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Github } from "lucide-react"
 import { MobileMenu } from "./mobile-menu"
 import { PreferencesDialog } from "./preferences-dialog"
+import { ChangelogModal } from "./changelog"
 
 export function Navbar() {
   return (
@@ -24,6 +25,10 @@ export function Navbar() {
                 Contribute
               </Link>
             </Button>
+            <Button variant="ghost" size="sm" asChild>
+                <ChangelogModal></ChangelogModal> 
+            </Button>
+
           </div>
           <PreferencesDialog />
           <ThemeToggle />

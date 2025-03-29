@@ -18,7 +18,8 @@ import {
   Table,
   FileCode,
   RefreshCw, 
-  KeySquare
+  KeySquare,
+  QrCode
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -78,6 +79,13 @@ const utilities = [
     icon: <Table className="h-5 w-5" />,
     href: "/tools/csv-to-json",
     tags: ["csv", "json", "convert", "table"],
+  },
+  {
+    title: "QRCode Generator",
+    description: "Generate QR codes instantly from text, URLs, or data.",
+    icon: <QrCode className="h-5 w-5" />,
+    href: "/tools/qrcode",
+    tags: ["qrcode", "generate", "scan", "barcode", "QR code creator"],
   },
 ]
 

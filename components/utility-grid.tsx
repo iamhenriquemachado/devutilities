@@ -14,6 +14,7 @@ import {
   Clock,
   Table,
   FileCode,
+  QrCode 
 } from "lucide-react"
 
 const utilities = [
@@ -62,7 +63,7 @@ const utilities = [
   {
     title: "Secure Password Generator",
     description:
-      "nstantly create strong, random passwords to enhance security. Customize length, include symbols, numbers, and uppercase/lowercase letters",
+      "Instantly create strong, random passwords to enhance security. Customize length, include symbols, numbers, and uppercase/lowercase letters",
     icon: <Hash className="h-6 w-6" />,
     href: "/tools/secure-password",
   },
@@ -72,6 +73,13 @@ const utilities = [
       "Easily convert CSV data to JSON format with our free tool. Quickest way to turn tabular data into a JSON format for APIs and data processing.",
     icon: <Table className="h-6 w-6" />,
     href: "/tools/csv-to-json",
+  },
+  {
+    title: "QRCode Generator",
+    description:
+      "Generate QR codes effortlessly with our free tool. Instantly convert text, URLs, contact details, and more into scannable QR codes. ",
+    icon: <QrCode className="h-6 w-6" />,
+    href: "/tools/qrcode",
   }
 ]
 

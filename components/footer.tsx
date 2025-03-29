@@ -1,5 +1,6 @@
 import { Logo } from "./logo"
 import Link from "next/link"
+import { ChangelogModal } from "./changelog"
 
 export function Footer() {
   return (
@@ -25,6 +26,7 @@ export function Footer() {
             GitHub
           </Link>
         </div>
+        
       </div>
     </footer>
   )
