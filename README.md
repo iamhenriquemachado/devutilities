@@ -21,6 +21,7 @@
 | Secure Password Generator | Secure, random password generator with strong encryption | [/tools/secure-password](https://devutilities.vercel.app/tools/secure-password) |
 | CSV to JSON | Convert CSV data to JSON format | [/tools/csv-to-json](https://devutilities.vercel.app/tools/csv-to-json) |
 | QRCode Generator | Generate QR codes instantly from text, URLs, or data. | [/tools/qrcode](https://devutilities.vercel.app/tools/qrcode) |
+| Text Case Conveter | Trasnform your texts into different formats. | [/tools/text-case-converter](https://devutilities.vercel.app/tools/text-case) |
 
 ## 🚀 Getting Started
 
