@@ -21,6 +21,14 @@ export function ChangelogModal() {
           <p>All notable changes to <strong>DevUtilities</strong> will be documented here.</p>
 
           <section>
+            <h2 className="text-lg font-semibold">📌 [1.2.0] - 2025-03-31</h2>
+            <h3 className="font-medium mt-2">✨ Added</h3>
+            <ul className="list-disc list-inside ml-4">
+              <li><strong>Text Case Converter</strong> implemented.</li>
+            </ul>
+          </section>
+
+          <section>
             <h2 className="text-lg font-semibold">📌 [1.1.0] - 2025-03-29</h2>
             <h3 className="font-medium mt-2">✨ Added</h3>
             <ul className="list-disc list-inside ml-4">
@@ -49,7 +57,6 @@ export function ChangelogModal() {
               <li><strong>Regex Tester</strong> – Test and validate regular expressions.</li>
               <li><strong>HTML to Markdown Converter</strong> – Convert HTML content into Markdown format.</li>
               <li><strong>Markdown Previewer</strong> – Live preview for Markdown files.</li>
-              <li><strong>Text Case Converter</strong> – Convert text to uppercase, lowercase, camelCase, snake_case, etc.</li>
               <li><strong>IP Address Lookup</strong> – Get geolocation details of an IP address.</li>
               <li><strong>Timestamp Converter</strong> – Convert Unix timestamps to readable dates.</li>
               <li><strong>Unit Converter</strong> – Convert between metric and imperial units.</li>

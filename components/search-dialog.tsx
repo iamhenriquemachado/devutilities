@@ -19,7 +19,8 @@ import {
   FileCode,
   RefreshCw, 
   KeySquare,
-  QrCode
+  QrCode, 
+  CaseUpper 
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -86,6 +87,13 @@ const utilities = [
     icon: <QrCode className="h-5 w-5" />,
     href: "/tools/qrcode",
     tags: ["qrcode", "generate", "scan", "barcode", "QR code creator"],
+  },
+  {
+    title: "Text Case Conveter",
+    description: "Trasnform your texts into different formats",
+    icon: <CaseUpper className="h-5 w-5" />,
+    href: "/tools/text-conveter",
+    tags: ["text converter", "case converter", "snake case", "camel case", "pascal case", "kebab case", "uppercase", "lowercase"],
   },
 ]
 

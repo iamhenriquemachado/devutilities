@@ -14,7 +14,8 @@ import {
   Clock,
   Table,
   FileCode,
-  QrCode 
+  QrCode,
+  CaseUpper 
 } from "lucide-react"
 
 const utilities = [
@@ -80,6 +81,12 @@ const utilities = [
       "Generate QR codes effortlessly with our free tool. Instantly convert text, URLs, contact details, and more into scannable QR codes. ",
     icon: <QrCode className="h-6 w-6" />,
     href: "/tools/qrcode",
+  },
+  {
+    title: "Text Case Conveter",
+    description: "Effortlessly convert text between different cases. Transform your text into snake_case, camelCase, PascalCase, kebab-case, UPPERCASE and lowercase", 
+    icon: <CaseUpper  className="h-6 w-6" />,
+    href: "/tools/text-case",
   }
 ]
 

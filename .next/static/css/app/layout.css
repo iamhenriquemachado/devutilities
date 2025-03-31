@@ -758,6 +758,9 @@ video {
 .ml-2 {
   margin-left: 0.5rem;
 }
+.ml-4 {
+  margin-left: 1rem;
+}
 .ml-auto {
   margin-left: auto;
 }
@@ -1158,6 +1161,9 @@ video {
 }
 .resize-none {
   resize: none;
+}
+.list-inside {
+  list-style-position: inside;
 }
 .list-disc {
   list-style-type: disc;

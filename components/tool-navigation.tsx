@@ -14,12 +14,10 @@ const utilities = [
   { title: "YAML to JSON", href: "/tools/yaml-to-json" },
   { title: "Hash Generator", href: "/tools/hash-generator" },
   { title: "Secure Password Generator", href: "/tools/secure-password" },
-  { title: "Color Converter", href: "/tools/color-converter" },
-  { title: "JWT Decoder", href: "/tools/jwt-decoder" },
   { title: "CSV to JSON", href: "/tools/csv-to-json" },
-  { title: "Timestamp Converter", href: "/tools/timestamp-converter" },
-  { title: "Query to JSON", href: "/tools/query-to-json" },
-  { title: "Cron Generator", href: "/tools/cron-generator" },
+  { title: "QR Code Generator", href: "/tools/qrcode" },
+  { title: "Text Case Converter", href: "/tools/text-case" },
+
 ]
 
 export function ToolNavigation() {
