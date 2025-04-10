@@ -20,6 +20,56 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/tools/text-case/page.js"
+    ],
+    "/tools/lorem-ipsum-generator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/lorem-ipsum-generator/page.js"
+    ],
+    "/tools/json-formatter/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/json-formatter/page.js"
+    ],
+    "/tools/base64/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/base64/page.js"
+    ],
+    "/tools/url-encoder/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/url-encoder/page.js"
+    ],
+    "/tools/uuid-generator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/uuid-generator/page.js"
+    ],
+    "/tools/yaml-to-json/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/yaml-to-json/page.js"
+    ],
+    "/tools/hash-generator/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/hash-generator/page.js"
+    ],
+    "/tools/secure-password/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/secure-password/page.js"
+    ],
+    "/tools/csv-to-json/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/csv-to-json/page.js"
+    ],
+    "/tools/qrcode/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/tools/qrcode/page.js"
     ]
   }
 }

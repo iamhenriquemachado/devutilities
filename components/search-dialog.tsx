@@ -20,7 +20,9 @@ import {
   RefreshCw, 
   KeySquare,
   QrCode, 
-  CaseUpper 
+  CaseUpper, 
+  TextCursor, 
+  FileJson2
 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -56,7 +58,7 @@ const utilities = [
   {
     title: "YAML to JSON",
     description: "Convert YAML to JSON format",
-    icon: <FileCode className="h-5 w-5" />,
+    icon: <FileJson2 className="h-5 w-5" />,
     href: "/tools/yaml-to-json",
     tags: ["yaml", "json", "convert", "format"],
   },
@@ -92,8 +94,15 @@ const utilities = [
     title: "Text Case Conveter",
     description: "Trasnform your texts into different formats",
     icon: <CaseUpper className="h-5 w-5" />,
-    href: "/tools/text-conveter",
+    href: "/tools/text-case",
     tags: ["text converter", "case converter", "snake case", "camel case", "pascal case", "kebab case", "uppercase", "lowercase"],
+  },
+  {
+    title: "Lorem Ipsum Generator",
+    description: "Generate Lorem Ipsum to fill your pages instantly.", 
+    icon: <TextCursor className="h-5 w-5" />,
+    href: "/tools/lorem-ipsum-generator",
+    tags: ["lorem ipsum", "placeholder text", "dummy text", "text generator", "random text", "mockup content", "filler text", "design tool"],
   },
 ]
 

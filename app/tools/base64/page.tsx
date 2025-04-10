@@ -11,8 +11,10 @@ export const metadata = {
 export default function Base64Page() {
   return (
     <div className="container py-8">
-
-      <div>
+      <div className="flex items-center gap-2 mb-6">
+        <div className="text-jam-purple">
+          <CodeIcon className="h-6 w-6" />
+        </div>
         <h1 className="text-2xl font-bold">Base 64 Encode/Decode</h1>
       </div>
       <p className="text-muted-foreground mb-10 mt-5">

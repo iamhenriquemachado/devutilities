@@ -17,7 +17,7 @@ const utilities = [
   { title: "CSV to JSON", href: "/tools/csv-to-json" },
   { title: "QR Code Generator", href: "/tools/qrcode" },
   { title: "Text Case Converter", href: "/tools/text-case" },
-
+  { title: "Lorem Ipsum Generator", href: "/tools/lorem-ipsum-generator" },
 ]
 
 export function ToolNavigation() {

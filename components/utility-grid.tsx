@@ -15,7 +15,9 @@ import {
   Table,
   FileCode,
   QrCode,
-  CaseUpper 
+  CaseUpper, 
+  TextCursor, 
+  KeySquare
 } from "lucide-react"
 
 const utilities = [
@@ -65,7 +67,7 @@ const utilities = [
     title: "Secure Password Generator",
     description:
       "Instantly create strong, random passwords to enhance security. Customize length, include symbols, numbers, and uppercase/lowercase letters",
-    icon: <Hash className="h-6 w-6" />,
+    icon: <KeySquare className="h-6 w-6" />,
     href: "/tools/secure-password",
   },
   {
@@ -84,9 +86,15 @@ const utilities = [
   },
   {
     title: "Text Case Conveter",
-    description: "Effortlessly convert text between different cases. Transform your text into snake_case, camelCase, PascalCase, kebab-case, UPPERCASE and lowercase", 
+    description: "Effortlessly convert text between different cases. Transform your text into snake_case, camelCase, PascalCase, kebab-case, UPPERCASE and lowercase.", 
     icon: <CaseUpper  className="h-6 w-6" />,
     href: "/tools/text-case",
+  },
+  {
+    title: "Lorem Ipsum Generator",
+    description: "Quickly generate random Lorem Ipsum text for your projects. Ideal for placeholders, mockups, and layout testing.", 
+    icon: <TextCursor className="h-6 w-6" />,
+    href: "/tools/lorem-ipsum-generator",
   }
 ]
 

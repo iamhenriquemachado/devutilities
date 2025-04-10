@@ -1,5 +1,5 @@
 import { YamlFormatter } from "@/components/tools/yaml-to-json"
-import { FileJson } from "lucide-react"
+import { FileJson2  } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
 
@@ -13,7 +13,7 @@ export default function YamlToJsonFormatterPage() {
     <div className="container py-8">
       <div className="flex items-center gap-2 mb-6">
         <div className="text-jam-purple">
-          <FileJson className="h-6 w-6" />
+          <FileJson2 className="h-6 w-6" />
         </div>
         <h1 className="text-2xl font-bold">YAML to JSON Converter</h1>
       </div>
@@ -24,7 +24,7 @@ export default function YamlToJsonFormatterPage() {
       <ToolDocumentation
         title="JSON Formatter"
         description=""
-        icon={<FileJson className="h-6 w-6" />}
+        icon={<FileJson2 className="h-6 w-6" />}
         howToUse={[
             "Paste your YAML data into the input field.",
             "Click the 'Convert to JSON' button or wait for auto-conversion if enabled.",

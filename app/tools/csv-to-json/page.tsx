@@ -1,5 +1,5 @@
 import { CsvToJsonFormatter } from "@/components/tools/csv-to-json"
-import { FileJson } from "lucide-react"
+import { Table } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
 
@@ -13,7 +13,7 @@ export default function CsvToJsonPage() {
     <div className="container py-8">
       <div className="flex items-center gap-2 mb-6">
         <div className="text-jam-purple">
-          <FileJson className="h-6 w-6" />
+          <Table className="h-6 w-6" />
         </div>
         <h1 className="text-2xl font-bold">CSV to JSON Converter</h1>
       </div>
@@ -24,7 +24,7 @@ export default function CsvToJsonPage() {
       <ToolDocumentation
         title="CSV to JSON Converter"
         description=""
-        icon={<FileJson className="h-6 w-6" />}
+        icon={<Table className="h-6 w-6" />}
         howToUse={[
           "Paste or upload your CSV data into the input field.",
           "Click the 'Convert' button to transform CSV into JSON format.",
