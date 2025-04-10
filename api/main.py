@@ -12,6 +12,7 @@ import random
 import csv 
 import io 
 import qrcode
+from lorem_text import lorem 
 
 app = FastAPI(title="Dev Utilities API")
 logger = logging.getLogger("uvicorn")
@@ -51,6 +52,10 @@ class CsvFormatter(BaseModel):
 
 class QrCode(BaseModel):
     text: str 
+
+class LoremIpsumGenerator(BaseModel):
+    format: str
+    count: int
 
 # SERVER Running 
 @app.get("/")
@@ -187,8 +192,6 @@ async def csv_to_json(csv_data: CsvFormatter):
           logger.error(f"Error while parsing CSV: {str(e)}")
           raise HTTPException(status_code=404, detail="Error while formating CSV to JSON")
 
-
-
 # Generate QRCode
 @app.post("/api/qrcode")
 async def qrcode_generator(qrcode_data: QrCode):
@@ -205,6 +208,27 @@ async def qrcode_generator(qrcode_data: QrCode):
     except Exception as e:
         logger.error(f"Error while generating QrCode: {str(e)}")
         raise HTTPException(status_code=404, detail="Error while generating a QrCode")
+
+# Lorem Ipsum Generator
+@app.post("/api/lorem-ipsum")
+async def lorem_ipsum_generator(loremipsum_data: LoremIpsumGenerator):
+    try:
+        format = loremipsum_data.format 
+
+        match format:
+            case "paragraphs":
+                p = lorem.paragraphs(loremipsum_data.count)
+                return { "content": p }
+            case "words":
+                w = lorem.words(loremipsum_data.count)
+                return { "content": w }
+            case "sentences":
+                s = " ".join([lorem.sentence() for _ in range(loremipsum_data.count)])
+                return { "content": s }
+
+    except Exception as e: 
+        logger.error(f"Error while generating Lorem Ipsum: {str(e)}")
+        raise HTTPException(status_code=400, detail="Error while generating Lorem Ipsum.")
 
 # Start server
 if __name__ == "__main__":

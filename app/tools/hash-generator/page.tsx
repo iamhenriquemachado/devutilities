@@ -1,5 +1,5 @@
 import { HashGenerator } from "@/components/tools/hash-generator"
-import { FileJson } from "lucide-react"
+import { Hash } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
 
@@ -13,7 +13,7 @@ export default function HashGeneratorPage() {
     <div className="container py-8">
       <div className="flex items-center gap-2 mb-6">
         <div className="text-jam-purple">
-          <FileJson className="h-6 w-6" />
+          <Hash className="h-6 w-6" />
         </div>
         <h1 className="text-2xl font-bold">Hash Generator</h1>
       </div>
@@ -24,7 +24,7 @@ export default function HashGeneratorPage() {
       <ToolDocumentation
         title="Hash Generator"
         description=""
-        icon={<FileJson className="h-6 w-6" />}
+        icon={<Hash className="h-6 w-6" />}
         howToUse={[
           "Paste your data into the input field.",
           "Select a hash algorithm (e.g., MD5, SHA-1, SHA-256).",

@@ -1,5 +1,5 @@
 import { UrlEncoder } from "@/components/tools/url-encoder"
-import { CodeIcon } from "lucide-react"
+import { Globe } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
 
@@ -12,7 +12,10 @@ export default function Base64Page() {
   return (
     <div className="container py-8">
 
-      <div>
+<div className="flex items-center gap-2 mb-6">
+        <div className="text-jam-purple">
+          <Globe className="h-6 w-6" />
+        </div>
         <h1 className="text-2xl font-bold">URL Encode/Decode</h1>
       </div>
       <p className="text-muted-foreground mb-10 mt-5">
@@ -24,7 +27,7 @@ export default function Base64Page() {
       <ToolDocumentation
         title="URL  Encoder/Decoder"
         description=""
-        icon={<CodeIcon className="h-6 w-6" />}
+        icon={<Globe className="h-6 w-6" />}
         howToUse={[  
           "Select 'Encode' or 'Decode' mode based on your needs.",  
           "Paste your URL or encoded data into the input field.",  

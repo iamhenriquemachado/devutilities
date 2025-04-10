@@ -1,5 +1,5 @@
 import { UUIDGenerator } from "@/components/tools/uuid-generator"
-import { FileJson } from "lucide-react"
+import { Key } from "lucide-react"
 import { ToolNavigation } from "@/components/tool-navigation"
 import { ToolDocumentation } from "@/components/tool-documentation"
 
@@ -13,7 +13,7 @@ export default function UUIDFormaterPage() {
     <div className="container py-8">
       <div className="flex items-center gap-2 mb-6">
         <div className="text-jam-purple">
-          <FileJson className="h-6 w-6" />
+          <Key className="h-6 w-6" />
         </div>
         <h1 className="text-2xl font-bold">UUID Generator</h1>
       </div>
@@ -24,7 +24,7 @@ export default function UUIDFormaterPage() {
       <ToolDocumentation
         title="UUID Generator"
         description=""
-        icon={<FileJson className="h-6 w-6" />}
+        icon={<Key className="h-6 w-6" />}
         howToUse={[
             "Click the 'Generate UUID' button to create a new unique identifier.",
             "Choose between UUID v1, v4, or other available versions if applicable.",
