@@ -4,6 +4,10 @@
   <img src="/public/placeholder-logo.svg" alt="DevUtils Logo" width="120" height="120" />
 </p>
 
+<a align="center" href="https://devutilities.vercel.app/">
+  devutilities.vercel.app/
+</a>
+
 <p align="center">
   A collection of essential tools to streamline your development workflow.
 </p>
