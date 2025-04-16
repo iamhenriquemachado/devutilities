@@ -1,4 +1,5 @@
-# DevUtilities
+<h1 align="center">DevUtilities</h1>
+
 <p align="center">
   <img src="/public/placeholder-logo.svg" alt="DevUtils Logo" width="120" height="120" />
 </p>
